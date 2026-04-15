@@ -93,7 +93,7 @@ a {
   color: var(--white);
   background:
     linear-gradient(90deg, rgba(31, 36, 33, 0.88), rgba(31, 36, 33, 0.48), rgba(31, 36, 33, 0.18)),
-    url("assets/images/hero-office.jpg") center/cover;
+    url("images/hero-office.jpg") center/cover;
 }
 
 .hero-content {
@@ -348,15 +348,15 @@ h3 {
 }
 
 .blackout-hero {
-  --project-image: url("assets/images/project-blackout-hero.jpg");
+  --project-image: url("images/project-blackout-hero.jpg");
 }
 
 .stock-hero {
-  --project-image: url("assets/images/project-stock-hero.jpg");
+  --project-image: url("images/project-stock-hero.jpg");
 }
 
 .vision-hero {
-  --project-image: url("assets/images/project-vision-hero.jpg");
+  --project-image: url("images/project-vision-hero.jpg");
 }
 
 .project-hero-content {
@@ -438,7 +438,7 @@ h3 {
   color: var(--white);
   background:
     linear-gradient(90deg, rgba(31, 36, 33, 0.9), rgba(31, 36, 33, 0.48), rgba(31, 36, 33, 0.18)),
-    url("assets/images/skills-hero.jpg") center/cover;
+    url("images/skills-hero.jpg") center/cover;
 }
 
 .skills-hero-content {
