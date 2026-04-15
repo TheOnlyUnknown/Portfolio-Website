@@ -302,11 +302,17 @@ h3 {
   gap: 18px;
 }
 
+.skills-panel {
+  display: grid;
+  gap: 22px;
+  align-content: start;
+}
+
 .skills-list {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .skills-list span {
@@ -318,9 +324,10 @@ h3 {
 }
 
 .skills-button {
-  flex-basis: 100%;
+  justify-self: start;
   width: fit-content;
-  margin-top: 14px;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-section {
