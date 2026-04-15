@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Stock Market Movement Prediction project by Gurkeerat Jawanda."
+    />
+    <title>Stock Market Movement Prediction | Gurkeerat Jawanda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Gurkeerat Jawanda portfolio home">Jawanda</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html#work">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-hero stock-hero">
+        <div class="project-hero-content">
+          <a class="back-link" href="index.html#work">Back to projects</a>
+          <p class="eyebrow">Stock Prediction</p>
+          <h1>Stock Market Movement Prediction</h1>
+          <p class="hero-text">
+            Time-series machine learning project for predicting next-day stock movement from
+            historical market data.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-detail">
+        <div class="project-overview">
+          <p class="eyebrow">Overview</p>
+          <h2>Reading market movement through data.</h2>
+          <p>
+            This project applies machine learning to forecast next-day stock price direction using historical market data.
+            It includes data preprocessing, feature engineering, model comparison,
+            and time-series validation to build a practical workflow for financial prediction.
+
+          </p>
+        </div>
+
+        <div class="detail-grid">
+          <article class="detail-card">
+            <h3>Goal</h3>
+            <p>
+            Build a machine learning model that predicts whether a stock will move up or down based on past price behaviour and derived market features.
+            </p>
+          </article>
+          <article class="detail-card">
+            <h3>Methods</h3>
+            <p>
+              Prepared historical stock data, engineered lag-based and return-based features, 
+              and trained multiple models including logistic regression, SVM, and random forest using time-series cross-validation.
+            </p>
+          </article>
+          <article class="detail-card">
+            <h3>Tools</h3>
+            <p>Python, pandas, NumPy, scikit-learn, matplotlib, seaborn, TimeSeriesSplit, and 
+               feature engineering techniques for financial data.
+</p>
+          </article>
+        </div>
+
+        <div class="project-notes">
+          <h2>What I Worked On</h2>
+          <ul>
+            <li>Cleaned and organised multi-company historical stock price data.
+            <li>Predictive features such as returns, rolling trends, and lag variables.</li>
+            <li>Trained and compared multiple machine learning models for next-day movement prediction.</li>
+            <li>Evaluated model performance using accuracy, F1-score, ROC-AUC, and cross-validation.</li>
+            <li>Analysed results to understand which modelling approach worked best for time-series data.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Jawanda</span>
+      <a href="index.html#work">All projects</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

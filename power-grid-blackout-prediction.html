@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Power Grid Blackout Prediction project by Gurkeerat Jawanda."
+    />
+    <title>Power Grid Blackout Prediction | Gurkeerat Jawanda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Gurkeerat Jawanda portfolio home">Jawanda</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html#work">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-hero blackout-hero">
+        <div class="project-hero-content">
+          <a class="back-link" href="index.html#work">Back to projects</a>
+          <p class="eyebrow">Prediction Model</p>
+          <h1>Power Grid Blackout Prediction</h1>
+          <p class="hero-text">
+            Machine learning model for identifying blackout risk patterns from power system data.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-detail">
+        <div class="project-overview">
+          <p class="eyebrow">Overview</p>
+          <h2>Predicting risk before outages happen.</h2>
+          <p>
+            This project applies machine learning to predict blackout risk using power grid operational data. 
+            It follows a full ML workflow from preprocessing and imbalance handling to
+            model training, evaluation, and interpretation, with the goal of supporting earlier and better decision-making.
+          </p>
+        </div>
+
+        <div class="detail-grid">
+          <article class="detail-card">
+            <h3>Goal</h3>
+            <p>
+             Develop a machine learning model that identifies blackout risk from power grid 
+             operating data and helps distinguish unstable conditions from normal system behaviour.
+            </p>
+          </article>
+          <article class="detail-card">
+            <h3>Methods</h3>
+            <p>
+              Cleaned and prepared generator and bus data, handled class imbalance, engineered useful features, 
+              and trained classification models including logistic regression, random forest, and XGBoost for comparison.
+            </p>
+          </article>
+          <article class="detail-card">
+            <h3>Tools</h3>
+            <p>R, Python, pandas, scikit-learn, caret, ROSE, XGBoost, ggplot2, 
+               and performance metrics such as accuracy, precision, recall, F1-score, and ROC-AUC.</p>
+          </article>
+        </div>
+
+        <div class="project-notes">
+          <h2>What I Worked On</h2>
+          <ul>
+            <li>Preprocessed power grid data from multiple sources for machine learning analysis.</li>
+            <li>Handled imbalanced classes using resampling techniques like ROSE and SMOTE.</li>
+            <li>Trained and compared multiple classification models for blackout prediction.</li>
+            <li>Evaluated model performance using confusion matrices, ROC analysis, and feature importance.</li>
+            <li>Interpreted results to show which grid indicators contributed most to blackout risk.</li>
+        
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Jawanda</span>
+      <a href="index.html#work">All projects</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

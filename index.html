@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jawanda's personal portfolio with selected projects, skills, and contact links."
+    />
+    <title>Jawanda | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Jawanda portfolio home">Jawanda</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#work">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-label="Introduction">
+        <div class="hero-content">
+          <p class="eyebrow">Portfolio</p>
+          <h1>Hi, I’m Gurkeerat Jawanda. Aspiring AI and machine learning engineer.</h1>
+          <p class="hero-text">
+            A collection of AI, machine learning, and software projects built to solve real problems.
+          </p>
+          <div class="hero-actions" aria-label="Portfolio actions">
+            <a class="button primary" href="#work">View Projects</a>
+            <a class="button secondary" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band" aria-label="Snapshot">
+        <div class="intro-inner">
+          <img
+            src="assets/images/workspace-collaboration.jpg"
+            alt="A collaborative workspace with laptops and notes"
+          />
+          <div>
+            <p class="eyebrow">Focus</p>
+            <h2>Building practical AI, ML, and software solutions with real-world impact.</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="work">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Projects</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <img
+              src="assets/images/project-code.jpg"
+              alt="Code on a laptop screen"
+            />
+            <div class="project-body">
+              <p class="project-tag">PREDICTION MODEL</p>
+              <h3>Power Grid Blackout Prediction</h3>
+              <p>
+                Machine learning model for predicting blackout risk using power system data 
+                and classification techniques.
+              </p>
+              <a href="power-grid-blackout-prediction.html" aria-label="Open Power Grid Blackout Prediction">View project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img
+              src="assets/images/project-dashboard.jpg"
+              alt="Analytics dashboard on a computer screen"
+            />
+            <div class="project-body">
+              <p class="project-tag">STOCK PREDICTION</p>
+              <h3>Stock Market Movement Prediction</h3>
+              <p>
+                Time-series ML project built to predict next-day stock price movement from 
+                historical market data.
+              </p>
+              <a href="stock-market-movement-prediction.html" aria-label="Open Stock Market Movement Prediction">View project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img
+              src="assets/images/project-developer.jpg"
+              alt="Developer workspace with code editor"
+            />
+            <div class="project-body">
+              <p class="project-tag">APP</p>
+              <h3>AI-Powered Vision / Barcode &amp; Text Recognition App</h3>
+              <p>
+                Android app using ML Kit for barcode scanning, text recognition, and image
+                labelling with Firebase integration.
+              </p>
+              <a
+                href="ai-vision-barcode-text-recognition-app.html"
+                aria-label="Open AI-Powered Vision / Barcode and Text Recognition App"
+                >View project</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="about-copy">
+          <p class="eyebrow">About</p>
+          <h2>I care about building things that are useful, readable, and memorable.</h2>
+          <p>
+            I enjoy turning rough ideas into polished experiences, especially when the work asks
+            for clear thinking, careful structure, and a strong sense of how people move through a
+            product.
+          </p>
+        </div>
+        <div class="skills-list" aria-label="Skills">
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">Time Series Forecasting</span>
+          <span class="skill-tag">Computer Vision</span>
+          <span class="skill-tag">Android Development</span>
+          <span class="skill-tag">Deep Learning</span>
+          <span class="skill-tag">Data Analysis</span>
+          <span class="skill-tag">AI Solutions</span>
+          <span class="skill-tag">Predictive Modelling</span>
+          <span class="skill-tag">Model Evaluation</span>
+          <span class="skill-tag">Feature Engineering</span>
+          <span class="skill-tag">Git & GitHub</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">R</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">MATLAB</span>
+          <span class="skill-tag">Cloud Practitioner</span>
+          <a class="button primary skills-button" href="skills.html">View Skills</a>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s build the next thing.</h2>
+          <p>
+            Open to collaboration, internships, freelance projects, and conversations about
+            thoughtful digital work.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:gurkeeratjawanda@gmail.com">Email Me</a>
+          <a class="button secondary" href="https://github.com/repos?q=owner%3A%40me" target="_blank" rel="noreferrer"
+            >GitHub</a
+          >
+          <a class="button secondary" href="https://www.linkedin.com/in/gurkeerat-jawanda-303301274/" target="_blank" rel="noreferrer"
+            >LinkedIn</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Jawanda</span>
+      <a href="#home">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
