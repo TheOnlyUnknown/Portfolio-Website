@@ -311,7 +311,21 @@
   .scatter .axis{stroke:var(--line-2);stroke-width:1.2;}
   .scatter .bound{stroke:var(--ink);stroke-width:1.6;stroke-dasharray:6 6;animation:march 1.4s linear infinite;}
   @keyframes march{to{stroke-dashoffset:-24;}}
-  .scatter text,.flow text,.phone text{font:500 10.5px var(--mono);fill:var(--ink-3);}
+  .scatter text,.flow text,.nowcast text{font:500 10.5px var(--mono);fill:var(--ink-3);}
+  .nowcast-body{aspect-ratio:auto;display:flex;flex-direction:column;gap:14px;}
+  .nowcast{width:100%;height:auto;flex:0 0 auto;overflow:visible;}
+  .nowcast .axis{stroke:var(--line-2);stroke-width:1.2;}
+  .nowcast .now{stroke:var(--ink-3);stroke-width:1.2;stroke-dasharray:4 5;}
+  .nowcast .hist,.nowcast .fcst{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0;}
+  .nowcast .hist{stroke:var(--ink-2);stroke-width:2.2;transition:stroke-dashoffset 2s var(--ease);}
+  .nowcast .fcst{stroke:var(--peach);stroke-width:2.6;transition:stroke-dashoffset 1.2s var(--ease) 1.5s;}
+  .nowcast .band{fill:var(--peach);transform-box:fill-box;transform-origin:left center;transition:transform 1.4s var(--ease) 1.6s,opacity 1.4s var(--ease) 1.6s;}
+  .nowcast .band.outer{opacity:.16;}
+  .nowcast .band.inner{opacity:.3;}
+  .nowcast .dot{fill:var(--peach);}
+  .js:not(.reduced) .win:not(.in) .nowcast .hist,.js:not(.reduced) .win:not(.in) .nowcast .fcst{stroke-dashoffset:1;}
+  .js:not(.reduced) .win:not(.in) .nowcast .band{transform:scaleX(0);opacity:0;}
+  .card h3 .h3-sub{display:block;margin-top:8px;font:italic 400 .52em/1.2 var(--serif);letter-spacing:-.01em;color:var(--accent);}
   .flow .tk rect.body{fill:var(--ink-2);animation:tkc 6.4s linear infinite;animation-delay:var(--d,0s);}
   .flow .tk{animation:tk 6.4s linear infinite;animation-delay:var(--d,0s);opacity:0;}
   .flow .tk .ln{stroke:rgba(34,49,48,.55);stroke-width:2;stroke-linecap:round;}
@@ -319,14 +333,7 @@
   @keyframes tkc{0%,44%{fill:var(--ink-2);}56%,100%{fill:var(--c);}}
   .flow .hub{fill:#223130;stroke:var(--peach);stroke-width:1.6;}
   .flow .lane{fill:rgba(236,230,226,.06);stroke:var(--line-2);}
-  .phone .shell{fill:#223130;stroke:var(--ink-3);stroke-width:2;}
-  .phone .corner{fill:none;stroke:var(--peach);stroke-width:3;stroke-linecap:round;}
-  .phone .bc rect{fill:var(--ink);}
-  .phone .scan{fill:var(--amber-lt);opacity:.85;animation:scan 2.6s ease-in-out infinite alternate;}
   @keyframes scan{from{transform:translateY(0);}to{transform:translateY(100px);}}
-  .phone .tagbox{fill:rgba(236,189,149,.14);stroke:var(--peach);stroke-width:1.2;}
-  .phone .tagbox.alt{fill:rgba(219,152,64,.14);stroke:var(--amber-lt);}
-  .phone .tagt{fill:var(--ink);}
 
   /* ---------- Experience ---------- */
   .journey{--bg:var(--paper);--fg:var(--ink);--idx:var(--peach);--ttl:var(--peach);}
@@ -551,7 +558,7 @@
       <div class="sec-head">
         <p class="idx" data-r>02 — Projects</p>
         <div class="giant-wrap"><h2 class="giant split" id="projects-title" data-split>Projects</h2></div>
-        <p class="lede" data-r>Five projects, from a deployed risk model with measured results to an on-device Android app.</p>
+        <p class="lede" data-r>Five projects, from a deployed risk model with measured results to a macroeconomic nowcasting model.</p>
       </div>
 
       <div class="stack">
@@ -681,36 +688,41 @@
           </div>
         </article>
 
-        <!-- 05 Android -->
+        <!-- 05 GDP nowcast -->
         <article class="card" data-accent="amber" style="--i:4">
           <div class="card-inner">
-            <div class="win" role="img" aria-label="Illustration of a phone camera scanning a barcode, with detection labels for image and barcode.">
-              <div class="win-bar" aria-hidden="true"><i></i><i></i><i></i><span class="url">On-device image and barcode recognition</span></div>
-              <div class="win-body" aria-hidden="true">
-                <svg class="phone" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid meet">
-                  <rect class="shell" x="150" y="8" width="100" height="234" rx="20"/>
-                  <rect x="160" y="22" width="80" height="206" rx="10" fill="#1B2827"/>
-                  <g>
-                    <path class="corner" d="M170 70v-14h14M230 70v-14h-14M170 180v14h14M230 180v14h-14"/>
-                    <g class="bc" transform="translate(178,100)"><rect x="0" width="3" height="40"/><rect x="6" width="2" height="40"/><rect x="11" width="5" height="40"/><rect x="19" width="2" height="40"/><rect x="24" width="4" height="40"/><rect x="31" width="2" height="40"/><rect x="36" width="3" height="40"/><rect x="42" width="2" height="40"/></g>
-                    <rect class="scan" x="172" y="76" width="56" height="3" rx="1.5"/>
-                  </g>
-                  <rect class="tagbox" x="40" y="70" width="86" height="30" rx="10"/><text class="tagt" x="83" y="89" text-anchor="middle">Barcode</text>
-                  <rect class="tagbox alt" x="274" y="130" width="86" height="30" rx="10"/><text class="tagt" x="317" y="149" text-anchor="middle">Image</text>
-                  <path d="M126 85h24M250 145h24" stroke="#ECE6E2" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="3 4"/>
-                  <text x="200" y="215" text-anchor="middle">ML Kit</text>
+            <div class="win" role="img" aria-label="Illustrative fan chart of a GDP growth nowcast that widens into the future, above a bar chart of forecast error: Bayesian VAR 8.87 versus random walk 9.72, lower is better.">
+              <div class="win-bar" aria-hidden="true"><i></i><i></i><i></i><span class="url">Mixed-frequency Bayesian VAR · nowcast</span></div>
+              <div class="win-body nowcast-body" aria-hidden="true">
+                <svg class="nowcast" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid meet">
+                  <line class="axis" x1="16" y1="112" x2="388" y2="112"/>
+                  <path class="band outer" d="M250 56 C 300 42, 340 24, 386 18 L386 94 C 340 88, 300 76, 250 56 Z"/>
+                  <path class="band inner" d="M250 56 C 300 50, 340 40, 386 34 L386 64 C 340 68, 300 62, 250 56 Z"/>
+                  <path class="hist" pathLength="1" d="M20 80 L44 64 L68 84 L92 50 L116 72 L140 40 L164 64 L188 48 L212 74 L250 56"/>
+                  <path class="fcst" pathLength="1" d="M250 56 C 300 56, 340 42, 386 40"/>
+                  <line class="now" x1="250" y1="6" x2="250" y2="112"/>
+                  <circle class="dot" cx="250" cy="56" r="4.5"/>
+                  <text x="244" y="130" text-anchor="end">past quarters</text>
+                  <text x="258" y="130">nowcast</text>
                 </svg>
+                <div class="metric">
+                  <span class="m-name">RMSE · lower is better</span>
+                  <div class="bar-row"><span>Bayesian VAR</span><span class="track"><i class="fill hi" style="--v:.887"></i></span><b>8.87</b></div>
+                  <div class="bar-row"><span>Random walk</span><span class="track"><i class="fill" style="--v:.972;--d:150"></i></span><b>9.72</b></div>
+                </div>
+                <p class="chart-n">Top chart is illustrative, not model output · bars on a 0 to 10 axis</p>
               </div>
             </div>
             <div class="info">
-              <p class="num">05 / 05 · Mobile</p>
-              <h3>Android Real-Time Image Analysis App</h3>
-              <p class="desc">An Android application that recognises images and barcodes in real time, on the device, using Google ML Kit. Firebase handles data and user management.</p>
+              <p class="num">05 / 05 · Forecasting</p>
+              <h3>India GDP Nowcasting<span class="h3-sub">Mixed-frequency Bayesian VAR</span></h3>
+              <p class="desc">A nowcasting model that estimates Indian quarterly GDP growth in real time from five monthly indicators: industrial production (IIP), manufacturing PMI, Nifty 50, CPI and the RBI repo rate. It replicates the method of McCracken, Owyang &amp; Sekhposyan (2020). Monthly data is stacked into quarterly blocks, giving a 43×17 observation matrix for a Bayesian VAR with a hand-implemented Minnesota prior and a closed-form Normal-Inverse-Wishart posterior. I tuned the shrinkage hyperparameter λ with a 200-iteration grid search. Once a full quarter of monthly data was available, it beat the random-walk baseline, and I scored its density forecasts with CRPS using bootstrapped residuals.</p>
               <ul class="stats">
-                <li><b>On-device</b><span>Google ML Kit</span></li>
-                <li><b>Firebase</b><span>data &amp; user management</span></li>
+                <li><b>8.87</b><span>RMSE (random walk 9.72)</span></li>
+                <li><b>7.74</b><span>CRPS, density forecast</span></li>
+                <li><b>43×17</b><span>observation matrix</span></li>
               </ul>
-              <ul class="tags"><li>Java</li><li>Kotlin</li><li>Firebase</li><li>ML Kit</li></ul>
+              <ul class="tags"><li>Bayesian VAR</li><li>Minnesota prior</li><li>Normal-Inverse-Wishart</li><li>Mixed-frequency</li><li>CRPS</li></ul>
               <div class="links"><a href="https://github.com/TheOnlyUnknown" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#gh"/></svg>GitHub</a></div>
             </div>
           </div>
